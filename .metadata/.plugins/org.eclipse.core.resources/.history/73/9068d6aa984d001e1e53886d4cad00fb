@@ -1,0 +1,19 @@
+package com.six.primitive;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class Text {
+	public static void main(String[] args) {
+
+		ApplicationContext context = new ClassPathXmlApplicationContext("com/six/primitive/config.xml");
+		
+		
+	
+		Student student = context.getBean("lc", Student.class);
+		
+		System.out.println(student);
+	
+	}
+
+}

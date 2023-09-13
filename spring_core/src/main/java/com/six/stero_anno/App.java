@@ -1,0 +1,17 @@
+package com.six.stero_anno;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class App {
+	public static void main(String[] args) {
+
+		ApplicationContext context = new ClassPathXmlApplicationContext("com/six/stero_anno/config.xml");
+	
+		Sterotype sterotype = context.getBean("sterotype", Sterotype.class);
+		
+		System.out.println(sterotype);
+	
+	}
+
+}

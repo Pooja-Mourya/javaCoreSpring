@@ -1,0 +1,9 @@
+package com.spring_mvc.controller;
+
+public class RegisterController {
+
+	public RegisterController() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

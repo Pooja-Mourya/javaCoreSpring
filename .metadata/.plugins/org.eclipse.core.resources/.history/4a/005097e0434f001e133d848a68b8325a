@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-2.0.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- bean definitions here -->
+	<context:annotation-config />
+
+<!-- 	<bean name="st1" class="com.six.autowire.Student">
+		<property name="id">
+			<value>1</value>
+		</property>
+		<property name="name">
+			<value>pooja</value>
+		</property>
+		<property name="address">
+			<value>Bhopal</value>
+		</property>
+	</bean> -->
+	<!-- <bean name="st2" class="com.six.autowire.Student">
+		<property name="id">
+			<value>2</value>
+		</property>
+		<property name="name">
+			<value>pooja</value>
+		</property>
+		<property name="address">
+			<value>Bhopal</value>
+		</property>
+	</bean> -->
+	
+	<!-- <bean name="employee" class="com.six.autowire.Employee" /> -->
+	<bean name="id" class="com.six.autowire.Employee">
+	<property name="id"><value>1</value></property>
+	<property name="designation"><value>coder</value></property>
+	<property name="salary"><value>15820</value></property>
+	<property name="id"><value>1</value></property>
+	<property name="designation"><value>coder</value></property>
+	<property name="salary"><value>15820</value></property>
+	</bean>
+	
+	<bean id="pooja" class="com.six.autowire.xml.Student" autowire="byName"></bean>
+</beans>

@@ -1,0 +1,66 @@
+package com.spring.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.view.RedirectView;
+
+import com.spring.entity.UserEntity;
+import com.spring.service.UserService;
+import com.spring.service.UserServiceImpl;
+
+import org.springframework.ui.Model;
+
+@Controller
+public class HomeController {
+	
+	/**
+	 * @return
+	 */
+	@Autowired
+	
+	public UserServiceImpl userServiceI;
+
+	@RequestMapping("/home")
+	public String home() {
+		return "home";
+	}
+
+	@RequestMapping("/register")
+	public String signup() {
+		return "register";
+	}
+
+	@RequestMapping(path = "/createUser", method = RequestMethod.POST)
+	public String registerUser(@ModelAttribute UserEntity user, Model m) {
+//		m.addAttribute("msg", "Register Successfully");
+//		m.addAttribute(user);
+		userServiceI.saveMyUser(user);
+		System.out.println("create;User" +  user);
+		return "success";
+	}
+	
+	@RequestMapping(path = "/google")
+	public String googlePass() {
+		return "redirect:https://www.google.co.in/";
+	}
+	
+	@RequestMapping(path="/yahoo")
+	public RedirectView yahooPass() {
+		RedirectView rd = new RedirectView();
+		rd.setUrl("https://www.google.co.in/");
+		
+		return rd;
+	}
+	
+	@RequestMapping(path = "/search" , method = RequestMethod.POST)
+	public String search(@RequestParam("keyword")  String keyword) {
+		return "redirect:https://www.google.co.in/" + keyword;
+	}
+	
+	
+	
+}

@@ -1,0 +1,17 @@
+package com.spring_mvc_jdbc.service;
+
+import com.spring_mvc_jdbc.dao.UserDao;
+import com.spring_mvc_jdbc.entity.UserEntity;
+
+public abstract class UserSrviceImpl implements UserService {
+
+	private UserDao userDao;
+	@Override
+	public int createUsser(UserEntity user) {
+		// TODO Auto-generated method stub
+		int i = userDao.saveUser(user);
+		return i;
+	}
+
+	
+}

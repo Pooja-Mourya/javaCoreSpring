@@ -1,0 +1,9 @@
+package com.spring_mvc_jdbc;
+
+public class HomeController {
+
+	public HomeController() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

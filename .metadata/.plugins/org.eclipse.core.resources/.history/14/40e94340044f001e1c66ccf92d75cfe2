@@ -1,0 +1,21 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<% 
+String name = (String)request.getAttribute("name") ;
+Integer className = (Integer)request.getAttribute("class");
+/* List<String> list = (List<String>)request.getAttribute(""); */
+%>
+<h1>login page</h1>
+<h5>Name : <%=name
+%></h5>
+<h5>Class : <%=className
+%></h5>
+</body>
+</html>

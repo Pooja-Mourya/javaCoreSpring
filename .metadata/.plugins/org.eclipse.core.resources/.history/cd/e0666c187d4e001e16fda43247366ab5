@@ -1,0 +1,9 @@
+package com.crud.dao;
+
+public class StudentDaoImpl {
+
+	public StudentDaoImpl() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

@@ -1,0 +1,11 @@
+<%-- 
+<%
+response.sendRedirect("home");
+%> --%>
+
+<html>
+<body>
+<h1>hello</h1>
+<a href="view/register">next</a>
+</body>
+</html>

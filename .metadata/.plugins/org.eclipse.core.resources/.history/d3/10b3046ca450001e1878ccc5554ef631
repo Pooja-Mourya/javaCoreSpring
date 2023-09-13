@@ -1,0 +1,5 @@
+package com.spring_orm_mvc.entity;
+
+public class UserEntity {
+
+}

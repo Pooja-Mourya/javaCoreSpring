@@ -1,0 +1,9 @@
+package com.spring_mvc_jdbc.entity;
+
+public class UserEntity {
+
+	public UserEntity() {
+		// TODO Auto-generated constructor stub
+	}
+
+}
